@@ -30,204 +30,284 @@ public class VistaRectangulo extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        lbltitulo = new javax.swing.JLabel();
+        lblpunto1 = new javax.swing.JLabel();
+        lblpunto2 = new javax.swing.JLabel();
+        btncrearpunto1 = new javax.swing.JButton();
+        btncalculararea = new javax.swing.JButton();
+        lblvalipunto1 = new javax.swing.JLabel();
+        lblarearectangular = new javax.swing.JLabel();
+        txtvalicoordx1 = new javax.swing.JTextField();
+        txtvalicoordy1 = new javax.swing.JTextField();
+        btncomprobarpunto1 = new javax.swing.JButton();
+        txtcoordx2 = new javax.swing.JTextField();
+        txtcoody1 = new javax.swing.JTextField();
+        txtcoordx1 = new javax.swing.JTextField();
+        txtcoordy2 = new javax.swing.JTextField();
+        btncrearpunto2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        btnvalicomprobarpunto2 = new javax.swing.JButton();
+        txtvalicoordy2 = new javax.swing.JTextField();
+        txtvalicoordx2 = new javax.swing.JTextField();
+        lblvalipunto2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 36)); // NOI18N
-        jLabel1.setText("Gestor de Figuras Geométricas");
+        lbltitulo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 36)); // NOI18N
+        lbltitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitulo.setText("Gestor de Figuras Geométricas");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setText("Punto 1 (X1, Y1)");
+        lblpunto1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblpunto1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblpunto1.setText("Punto 1 (X1, Y1)");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setText("Punto 2 (X2, Y2)");
+        lblpunto2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblpunto2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblpunto2.setText("Punto 2 (X2, Y2)");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Crear Rectangulo");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        btncrearpunto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btncrearpunto1.setText("Crear Punto 1");
+        btncrearpunto1.addActionListener(this::btncrearpunto1ActionPerformed);
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setText("Calcular Area");
-        jButton2.addActionListener(this::jButton2ActionPerformed);
+        btncalculararea.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btncalculararea.setText("Calcular Area");
+        btncalculararea.addActionListener(this::btncalcularareaActionPerformed);
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setText("Validar punto");
+        lblvalipunto1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblvalipunto1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblvalipunto1.setText("Validar punto 1");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setText("Área:");
+        lblarearectangular.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblarearectangular.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblarearectangular.setText("Área Rectangular");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField1.setText("Coordenada X del punto");
-        jTextField1.addActionListener(this::jTextField1ActionPerformed);
+        txtvalicoordx1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtvalicoordx1.setText("Coordenada X1 del punto");
+        txtvalicoordx1.addActionListener(this::txtvalicoordx1ActionPerformed);
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField2.setText("Coordenada Y del punto");
-        jTextField2.addActionListener(this::jTextField2ActionPerformed);
+        txtvalicoordy1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtvalicoordy1.setText("Coordenada Y1 del punto");
+        txtvalicoordy1.addActionListener(this::txtvalicoordy1ActionPerformed);
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton3.setText("Comprobar Punto");
-        jButton3.addActionListener(this::jButton3ActionPerformed);
+        btncomprobarpunto1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btncomprobarpunto1.setText("Comprobar ");
+        btncomprobarpunto1.addActionListener(this::btncomprobarpunto1ActionPerformed);
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel10.setText("Resultado Validacíon.");
+        txtcoordx2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtcoordx2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtcoordx2.setText("Coordenada X2");
+        txtcoordx2.addActionListener(this::txtcoordx2ActionPerformed);
 
-        jTextField4.setEditable(false);
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField4.setText("Coordenada X2");
-        jTextField4.addActionListener(this::jTextField4ActionPerformed);
+        txtcoody1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtcoody1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtcoody1.setText("Coordenada  Y1");
+        txtcoody1.addActionListener(this::txtcoody1ActionPerformed);
 
-        jTextField5.setEditable(false);
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField5.setText("Coordenada  Y1");
-        jTextField5.addActionListener(this::jTextField5ActionPerformed);
+        txtcoordx1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtcoordx1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtcoordx1.setText("Coordenada X1");
+        txtcoordx1.addActionListener(this::txtcoordx1ActionPerformed);
 
-        jTextField6.setEditable(false);
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField6.setText("Coordenada X1");
-        jTextField6.addActionListener(this::jTextField6ActionPerformed);
+        txtcoordy2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtcoordy2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtcoordy2.setText("Coordenada Y2");
+        txtcoordy2.addActionListener(this::txtcoordy2ActionPerformed);
 
-        jTextField7.setEditable(false);
-        jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField7.setText("Coordenada Y2");
-        jTextField7.addActionListener(this::jTextField7ActionPerformed);
+        btncrearpunto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btncrearpunto2.setText("Crear Punto 2");
+        btncrearpunto2.addActionListener(this::btncrearpunto2ActionPerformed);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 738, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 386, Short.MAX_VALUE)
+        );
+
+        btnvalicomprobarpunto2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnvalicomprobarpunto2.setText("Comprobar ");
+        btnvalicomprobarpunto2.addActionListener(this::btnvalicomprobarpunto2ActionPerformed);
+
+        txtvalicoordy2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtvalicoordy2.setText("Coordenada Y2 del punto");
+        txtvalicoordy2.addActionListener(this::txtvalicoordy2ActionPerformed);
+
+        txtvalicoordx2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtvalicoordx2.setText("Coordenada X2 del punto");
+        txtvalicoordx2.addActionListener(this::txtvalicoordx2ActionPerformed);
+
+        lblvalipunto2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblvalipunto2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblvalipunto2.setText("Validar punto 2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(lblpunto2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btncrearpunto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtcoordy2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtcoordx2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtcoody1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtcoordx1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btncalculararea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblpunto1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btncrearpunto2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblarearectangular, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(42, 42, 42)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(32, 32, 32)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton3)
-                                    .addComponent(jLabel10))))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                                .addGap(110, 110, 110)
+                                .addComponent(lblvalipunto1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtvalicoordx1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtvalicoordy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btncomprobarpunto1)))
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtvalicoordx2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtvalicoordy2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnvalicomprobarpunto2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(135, 135, 135)
+                                .addComponent(lblvalipunto2))))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbltitulo)
+                .addGap(207, 207, 207))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1)
-                .addGap(42, 42, 42)
+                .addGap(21, 21, 21)
+                .addComponent(lbltitulo)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(111, 111, 111))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(lblpunto1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3))
+                        .addComponent(txtcoordx1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtcoody1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btncrearpunto1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addComponent(lblpunto2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtcoordx2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtcoordy2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btncrearpunto2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(btncalculararea, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblarearectangular, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel10))
-                        .addGap(30, 30, 30)))
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblvalipunto1)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtvalicoordx1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(9, 9, 9)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtvalicoordy1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btncomprobarpunto1)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblvalipunto2)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtvalicoordx2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(9, 9, 9)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtvalicoordy2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnvalicomprobarpunto2))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btncrearpunto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncrearpunto1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btncrearpunto1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btncalcularareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularareaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btncalcularareaActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtvalicoordx1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvalicoordx1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtvalicoordx1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtvalicoordy1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvalicoordy1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtvalicoordy1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btncomprobarpunto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomprobarpunto1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btncomprobarpunto1ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtcoordx2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcoordx2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtcoordx2ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void txtcoody1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcoody1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_txtcoody1ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void txtcoordx1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcoordx1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_txtcoordx1ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtcoordy2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcoordy2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtcoordy2ActionPerformed
+
+    private void btncrearpunto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncrearpunto2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncrearpunto2ActionPerformed
+
+    private void btnvalicomprobarpunto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvalicomprobarpunto2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnvalicomprobarpunto2ActionPerformed
+
+    private void txtvalicoordy2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvalicoordy2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtvalicoordy2ActionPerformed
+
+    private void txtvalicoordx2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvalicoordx2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtvalicoordx2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,21 +335,26 @@ public class VistaRectangulo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton btncalculararea;
+    private javax.swing.JButton btncomprobarpunto1;
+    private javax.swing.JButton btncrearpunto1;
+    private javax.swing.JButton btncrearpunto2;
+    private javax.swing.JButton btnvalicomprobarpunto2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblarearectangular;
+    private javax.swing.JLabel lblpunto1;
+    private javax.swing.JLabel lblpunto2;
+    private javax.swing.JLabel lbltitulo;
+    private javax.swing.JLabel lblvalipunto1;
+    private javax.swing.JLabel lblvalipunto2;
+    private javax.swing.JTextField txtcoody1;
+    private javax.swing.JTextField txtcoordx1;
+    private javax.swing.JTextField txtcoordx2;
+    private javax.swing.JTextField txtcoordy2;
+    private javax.swing.JTextField txtvalicoordx1;
+    private javax.swing.JTextField txtvalicoordx2;
+    private javax.swing.JTextField txtvalicoordy1;
+    private javax.swing.JTextField txtvalicoordy2;
     // End of variables declaration//GEN-END:variables
 }
