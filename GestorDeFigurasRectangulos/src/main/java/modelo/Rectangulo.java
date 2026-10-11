@@ -6,7 +6,7 @@ package modelo;
 
 /**
  *
- * @author usuario
+ * @author Daniel
  */
 public class Rectangulo {
     
