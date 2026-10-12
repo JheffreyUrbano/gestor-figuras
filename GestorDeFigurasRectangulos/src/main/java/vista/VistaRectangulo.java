@@ -322,9 +322,9 @@ public VistaRectangulo() {
                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(lblvalipunto5)
                                                 .addGap(42, 42, 42)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                    .addComponent(txtvalicoordy1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(lblvalipunto4)))))
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lblvalipunto4)
+                                                    .addComponent(txtvalicoordy1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,7 +398,7 @@ public VistaRectangulo() {
     }//GEN-LAST:event_txtvalicoordy1ActionPerformed
 
     private void btncomprobarpunto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomprobarpunto1ActionPerformed
-        // TODO add your handling code here:
+           validarPunto(txtvalicoordx1, txtvalicoordy1);
     }//GEN-LAST:event_btncomprobarpunto1ActionPerformed
 
     private void txtcoordx2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcoordx2ActionPerformed
@@ -429,7 +429,7 @@ public VistaRectangulo() {
     }//GEN-LAST:event_btncrearpunto2ActionPerformed
 
     private void btnvalicomprobarpunto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvalicomprobarpunto2ActionPerformed
-        // TODO add your handling code here:
+          validarPunto(txtvalicoordx2, txtvalicoordy2);
     }//GEN-LAST:event_btnvalicomprobarpunto2ActionPerformed
 
     private void txtvalicoordy2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvalicoordy2ActionPerformed
@@ -440,6 +440,29 @@ public VistaRectangulo() {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtvalicoordx2ActionPerformed
     
+    private void validarPunto(javax.swing.JTextField campoX, javax.swing.JTextField campoY) {
+      if (punto1 == null || punto2 == null) {
+        JOptionPane.showMessageDialog(this,
+                "Primero crea el Punto 1 y el Punto 2 del rectángulo.",
+                "Aviso", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+      try {
+        Punto p = leerPunto(campoX, campoY);
+        ControladorRectangulo controlador = new ControladorRectangulo(new Rectangulo(punto1, punto2));
+        boolean dentro = controlador.validarPuntoDentro(p);
+
+        String mensaje = "El punto (" + p.getX() + ", " + p.getY() + ") "
+                + (dentro ? "está DENTRO" : "está FUERA") + " del rectángulo.";
+        JOptionPane.showMessageDialog(this, mensaje, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+    }  catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this,
+                "Ingresa coordenadas numéricas válidas para el punto a validar.",
+                "Error", JOptionPane.ERROR_MESSAGE);
+    }
+}
+    
+ 
     private int px(double x) { return lienzo.getWidth() / 2 + (int) Math.round(x * ESCALA); }
     private int py(double y) { return lienzo.getHeight() / 2 - (int) Math.round(y * ESCALA); }
 
@@ -480,7 +503,9 @@ public VistaRectangulo() {
       double x = Double.parseDouble(campoX.getText().trim());
       double y = Double.parseDouble(campoY.getText().trim());
       return new Punto(x, y);
+         
 }
+    
     /**
      * @param args the command line arguments
      */
