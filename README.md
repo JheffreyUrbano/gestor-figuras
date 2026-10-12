@@ -108,7 +108,7 @@ classDiagram
         +main(String[] args)$ void
     }
 
-    FiguraGeometrica <|-- Rectangulo
+    FiguraGeometrica <|-- Rectangulo :
     Rectangulo "1" *-- "2" Punto : 
     ControladorRectangulo "1" --> "1" 
     VistaRectangulo ..> ControladorRectangulo : 
