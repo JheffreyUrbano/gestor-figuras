@@ -110,7 +110,7 @@ classDiagram
 
     FiguraGeometrica <|-- Rectangulo :
     Rectangulo "1" *-- "2" Punto : 
-    ControladorRectangulo "1" --> "1" 
+    ControladorRectangulo "1" --> "1" :
     VistaRectangulo ..> ControladorRectangulo : 
     VistaRectangulo ..> Rectangulo : 
     VistaRectangulo ..> Punto : 
