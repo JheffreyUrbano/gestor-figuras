@@ -206,7 +206,10 @@ public VistaRectangulo() {
             .addGap(0, 421, Short.MAX_VALUE)
         );
 
+        txtdx.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtdx.addActionListener(this::txtdxActionPerformed);
+
+        txtdy.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         btnmover.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnmover.setText("Mover");
