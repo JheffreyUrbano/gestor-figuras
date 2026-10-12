@@ -1,4 +1,3 @@
-# Gestor de Figuras: Clase Rectángulo con Interfaz Gráfica
 # gestor-de-figuras-geometricas
 
 Aplicación de escritorio con interfaz gráfica para crear un rectángulo a partir de dos puntos (vértices opuestos), dibujarlo en un plano cartesiano, calcular su área y comprobar si un punto está dentro o fuera de la figura. Está desarrollada con Java Swing (JFrame) en NetBeans, sin librerías externas.
@@ -95,6 +94,7 @@ classDiagram
     }
 
     class VistaRectangulo {
+        -int ESCALA$
         -Punto punto1
         -Punto punto2
         -JPanel lienzo
@@ -108,13 +108,13 @@ classDiagram
         +main(String[] args)$ void
     }
 
-    FiguraGeometrica <|-- Rectangulo :
-    Rectangulo "1" *-- "2" Punto : 
-    ControladorRectangulo "1" --> "1" :
-    VistaRectangulo ..> ControladorRectangulo : 
-    VistaRectangulo ..> Rectangulo : 
-    VistaRectangulo ..> Punto : 
-    main ..> VistaRectangulo : 
+    FiguraGeometrica <|-- Rectangulo
+    Rectangulo "1" *-- "2" Punto : p1, p2
+    ControladorRectangulo "1" --> "1" Rectangulo
+    VistaRectangulo ..> ControladorRectangulo : crea y usa
+    VistaRectangulo ..> Rectangulo : crea
+    VistaRectangulo ..> Punto : crea
+    main ..> VistaRectangulo : lanza
 ```
 
 ### Relaciones y cardinalidades
