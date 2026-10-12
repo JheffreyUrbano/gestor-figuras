@@ -94,7 +94,6 @@ classDiagram
     }
 
     class VistaRectangulo {
-        -int ESCALA$
         -Punto punto1
         -Punto punto2
         -JPanel lienzo
