@@ -95,7 +95,6 @@ classDiagram
     }
 
     class VistaRectangulo {
-        -int ESCALA$
         -Punto punto1
         -Punto punto2
         -JPanel lienzo
@@ -110,12 +109,12 @@ classDiagram
     }
 
     FiguraGeometrica <|-- Rectangulo
-    Rectangulo "1" *-- "2" Punto : p1, p2
-    ControladorRectangulo "1" --> "1" Rectangulo
-    VistaRectangulo ..> ControladorRectangulo : crea y usa
-    VistaRectangulo ..> Rectangulo : crea
-    VistaRectangulo ..> Punto : crea
-    main ..> VistaRectangulo : lanza
+    Rectangulo "1" *-- "2" Punto : 
+    ControladorRectangulo "1" --> "1" 
+    VistaRectangulo ..> ControladorRectangulo : 
+    VistaRectangulo ..> Rectangulo : 
+    VistaRectangulo ..> Punto : 
+    main ..> VistaRectangulo : 
 ```
 
 ### Relaciones y cardinalidades
