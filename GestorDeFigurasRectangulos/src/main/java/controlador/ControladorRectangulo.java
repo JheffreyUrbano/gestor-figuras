@@ -6,7 +6,7 @@ package controlador;
 
 import modelo.Rectangulo;
 import modelo.Punto;
-
+import modelo.FiguraGeometrica;
 
 /**
  *
@@ -14,15 +14,20 @@ import modelo.Punto;
  */
 public class ControladorRectangulo {
     private Rectangulo rectangulo;
-
+    private FiguraGeometrica figura;
+    
     public ControladorRectangulo(Rectangulo rectangulo) {
         this.rectangulo = rectangulo;
+        this.figura = rectangulo;
     }
 
     public double obtenerArea() {
         return rectangulo.calcularArea();
     }
     
+     public void mover(double dx, double dy) {
+        figura.mover(dx, dy);
+    }
     public boolean validarPuntoDentro(Punto p) {
         double minX = Math.min(rectangulo.getP1().getX(), rectangulo.getP2().getX());
         double maxX = Math.max(rectangulo.getP1().getX(), rectangulo.getP2().getX());
