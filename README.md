@@ -1,6 +1,5 @@
-# gestor-de-figuras-geometricas
+# Gestor-de-figuras-geometricas
 
-# gestor-de-figuras
 
 Aplicación de escritorio para trabajar con un **rectángulo** definido por dos vértices opuestos: calcular su área, moverlo en el plano y verificar si un punto está dentro de él. Está desarrollada con **Java y Swing/JFrame**, sin librerías externas, y aplica herencia, clases abstractas y polimorfismo.
 
@@ -115,7 +114,7 @@ Rectángulo con `P1(1, 1)` y `P2(5, 4)`:
 
 El modelo refleja la **Composición** (un `Rectangulo` *tiene* `Punto`) y la **Herencia** (un `Rectangulo` *es una* `FiguraGeometrica`).
 
-
+![diagramadeclases](GestorDeFigurasRectangulos/assets/diagramadeclasefigura.png)
 
 Relaciones y cardinalidades:
 
@@ -131,7 +130,7 @@ Relaciones y cardinalidades:
 
 Este diagrama detalla las comprobaciones lógicas (`AND` y `OR`) para determinar si las coordenadas ingresadas por el usuario caen dentro del área delimitada por los vértices opuestos.
 
-
+![diagramaflujo](GestorDeFigurasRectangulos/assets/flujogramafigura.png)
 
 El paso de leer los datos y mostrar el resultado lo realiza la vista; el cálculo (`min`, `max` y las comparaciones) está en `ControladorRectangulo.validarPuntoDentro`.
 
